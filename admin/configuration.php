@@ -13,6 +13,10 @@ include_once('actions.php');
 </div>
 <br>
 
+<div>
+	Utiliza el siguiente shortcode para mostrar el slider (esta será la página principal del plugin): [equipo_editorial]
+</div>
+
 <div class="wpm-6310">
 	<h1>Miembros del Equipo Editorial <button class="wpm-btn-success" id="add-team-member">Agregar Nuevo</button></h1>
 

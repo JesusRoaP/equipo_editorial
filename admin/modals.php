@@ -17,11 +17,11 @@ if (!empty($_POST['edit']) && $_POST['edit'] == 'Edit') {
     	<table border="0" width="100%" cellpadding="10" cellspacing="0">
        		<tr>
           		<td style="width: 150px;"><label class="wpm-form-label" for="name">Nombre:</label></td>
-              	<td><input type="text"  name="nombre" id="name" value="<?php echo $selMember['nombre'] ?>" class="wpm-form-input lg" placeholder="Nombre" size='40'/></td>
+              	<td><input type="text"  name="nombre" id="name" value="<?php echo $selMember['nombre'] ?>" class="wpm-form-input lg" placeholder="Nombre" size='40' required /></td>
            	</tr>
            	<tr>
               	<td><label class="wpm-form-label" for="designation">Cargo:</label></td>
-              	<td><input type="text"  name="cargo" id="designation" value="<?php echo $selMember['cargo'] ?>" class="wpm-form-input lg" placeholder="Cargo" size='40'/></td>
+              	<td><input type="text"  name="cargo" id="designation" value="<?php echo $selMember['cargo'] ?>" class="wpm-form-input lg" placeholder="Cargo" size='40' required /></td>
            	</tr>
 			<tr>
               	<td><label class="wpm-form-label" for="cvlac">URL CvLAC:</label></td>
@@ -75,11 +75,11 @@ if (!empty($_POST['edit']) && $_POST['edit'] == 'Edit') {
             	<table border="0" width="100%" cellpadding="10" cellspacing="0">
                		<tr>
                   		<td style="width: 150px;"><label class="wpm-form-label" for="name">Nombre:</label></td>
-                  		<td><input type="text"  name="nombre" id="nombre" value="" class="wpm-form-input lg" placeholder="Nombre" /></td>
+                  		<td><input type="text"  name="nombre" id="nombre" value="" class="wpm-form-input lg" placeholder="Nombre" required /></td>
                		</tr>
                		<tr>
                   		<td><label class="wpm-form-label" for="designation">Cargo:</label></td>
-                  		<td><input type="text"  name="cargo" id="cargo" value="" class="wpm-form-input lg" placeholder="Cargo" /></td>
+                  		<td><input type="text"  name="cargo" id="cargo" value="" class="wpm-form-input lg" placeholder="Cargo" required /></td>
                		</tr>
 					<tr>
             			<td><label class="wpm-form-label" for="cvlac">URL CvLAC:</label></td>
