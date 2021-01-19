@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'icons-team';
+  src: url('../fonts/icons.woff2?33485190') format('woff2'),
+      url('../fonts/icons.svg?33485190#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+   
+.icons_team {
+  font-family: "icons-team";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-right: .2em;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: normal;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+   
+.logo-cvlac:before { content: '\e800'; } /* '' */
