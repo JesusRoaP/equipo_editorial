@@ -1,4 +1,4 @@
-# project_bank
+# equipo_editorial
 
 Plugin para crear, mostrar y administrar la tabla wp_project de la base de datos de wordpress.
 
