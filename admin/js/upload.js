@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
                    jQuery("#upload_image_src_edit").val(image_url);
                    jQuery("#upload_image_img_edit").attr("src", image_url);
                 });
-        jQuery("#wpm_6310_add_new_media").css({
+        jQuery("#equipo-editorial_6310_add_new_media").css({
            "overflow-x": "hidden",
            "overflow-y": "auto"
         });
@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
                     jQuery("#upload_image_src_add").val(image_url);
                     jQuery("#upload_image_img_add").attr("src", image_url);
                  });
-         jQuery("#wpm_6310_add_new_media").css({
+         jQuery("#equipo-editorial_6310_add_new_media").css({
             "overflow-x": "hidden",
             "overflow-y": "auto"
          });
@@ -41,20 +41,20 @@ jQuery(document).ready(function() {
      /* ######### Media End ########### */
 
     /* Modal Close Start */
-    jQuery("body").on("click", ".wpm-6310-close, #wpm-from-close", function () {
-      jQuery("#wpm-6310-modal-add, #wpm-6310-modal-edit").fadeOut(500);
+    jQuery("body").on("click", ".equipo-editorial-close, #equipo-editorial-from-close", function () {
+      jQuery("#equipo-editorial-modal-add, #equipo-editorial-modal-edit").fadeOut(500);
       jQuery("body").css({
          "overflow": "initial"
       });
    });
    jQuery(window).click(function (event) {
-      if (event.target == document.getElementById('wpm-6310-modal-add')) {
-         jQuery("#wpm-6310-modal-add").fadeOut(500);
+      if (event.target == document.getElementById('equipo-editorial-modal-add')) {
+         jQuery("#equipo-editorial-modal-add").fadeOut(500);
          jQuery("body").css({
             "overflow": "initial"
          });
-      } else if (event.target == document.getElementById('wpm-6310-modal-edit')) {
-         jQuery("#wpm-6310-modal-edit").fadeOut(500);
+      } else if (event.target == document.getElementById('equipo-editorial-modal-edit')) {
+         jQuery("#equipo-editorial-modal-edit").fadeOut(500);
          jQuery("body").css({
             "overflow": "initial"
          });

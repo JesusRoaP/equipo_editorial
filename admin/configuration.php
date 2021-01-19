@@ -9,18 +9,20 @@ include_once('actions.php');
 
 <br><br>
 <div class="wrap">
-	Bienvenido a la configuración del plugin Equipo Editorial
+	<h2><?php _e( 'Equipo Editorial', 'equipo editorial' ) ?>
+	<button class="equipo-editorial-btn-success" id="add-team-member">Agregar Nuevo</button>
+	</h2>
+	<div id="response" class="<?php echo $type ?>"><p><?php echo $message ?></p></div>
+	Bienvenido a la configuración del plugin Equipo Editorial.
 </div>
 <br>
 
-<div>
-	Utiliza el siguiente shortcode para mostrar el slider (esta será la página principal del plugin): [equipo_editorial]
+<div class="ee-info">
+	<p>Utiliza el siguiente shortcode para mostrar el slider (esta será la página principal del plugin): <input id="shortcode" type="text" value="[equipo_editorial]"><button class="button" onclick="copyToClipboard('#shortcode')">Copiar Shortcode</button><span class="copy" style="display: none">Copiado!</span></p>
 </div>
 
-<div class="wpm-6310">
-	<h1>Miembros del Equipo Editorial <button class="wpm-btn-success" id="add-team-member">Agregar Nuevo</button></h1>
-
-	<table class="wpm-table">
+<div class="equipo-editorial">
+	<table class="equipo-editorial-table">
 	   	<tr>
 	      	<td style="width: 100px;">Nombre</td>
 	      	<td style="width: 100px;">Cargo</td>
@@ -51,13 +53,13 @@ include_once('actions.php');
 			  	'<td>
                  	<form method="post">
                         <input type="hidden" name="id" value="' . $value['id'] . '">
-						<button class="wpm-btn-success wpm-margin-right-10" style="float:left"  title="Edit"  type="submit" value="Edit" name="edit">
+						<button class="equipo-editorial-btn-success equipo-editorial-margin-right-10" style="float:left"  title="Edit"  type="submit" value="Edit" name="edit">
 							<i class="fas fa-edit" aria-hidden="true"></i>
 						</button>
                   	</form>
                   	<form method="post">
                         <input type="hidden" name="id" value="' . $value['id'] . '">
-						<button class="wpm-btn-danger" style="float:left"  title="Delete"  type="submit" value="delete" name="delete" onclick="return confirm(\'¿Quieres borrar este miembro?\');">
+						<button class="equipo-editorial-btn-danger" style="float:left"  title="Delete"  type="submit" value="delete" name="delete" onclick="return confirm(\'¿Quieres borrar este miembro?\');">
 							<i class="far fa-times-circle" aria-hidden="true"></i>
 						</button>
                   	</form>
@@ -66,6 +68,23 @@ include_once('actions.php');
    		}
    		?>
 	</table>
+
+<script>
+	function copyToClipboard(elemento) {
+		var $temp = jQuery("<input>")
+		jQuery("body").append($temp);
+		$temp.val(jQuery(elemento).val()).select();
+		document.execCommand("copy");
+		$temp.remove();
+    	setInterval(function(){
+        	jQuery(".copy").fadeOut(500);
+    	}, 3000);
+	}
+
+	jQuery('.ee-info .button').click(function(){
+		jQuery(this).next('.copy').fadeIn(500);
+	})
+</script>
 
 <?php
 include_once('modals.php');
